@@ -36,4 +36,6 @@ function fetchUser(callback){
 }
 fetchUser(user=>document.getElementById("myH1").textContent =user.name);
 
-
+let x= 14;
+let y= 14;
+document.write(x+y);
