@@ -124,39 +124,85 @@ function loop2(){
     }
 }
 */
-let para = document.getElementById("par");
 
 
 //conditional statements optional in for loop
 
-let output = document.getElementById("myH1");
-let array = [1,2,3,4,5,6,7,8,9,10];
+/* let output = document.getElementById("myH1");
+let para = document.getElementById("par");
 let i=0;
- function loop(){
+function loop(){
     document.querySelector("#myH1").style.color = "blue";
     document.querySelector("#myH1").style.fontSize = "20px";
     output.innerHTML = "starting of loop <br>";
     for(; ;i++){
         if(i>=array.length)break;
-    
-    output.innerHTML += "array["+i+"] ->"+ array[i]+"<br>";
-    }
- }
+        
+        output.innerHTML += "array["+i+"] ->"+ array[i]+"<br>";
+        }
+        }
 
 //without iteration statement
 let j=0;
 function loop2(){
-for(; ;){
+    for(; ;){  //initialization and iteration statement are optional in for loop
     if(j>=array.length)break;
     document.querySelector("#par").style.color = "red";
     document.querySelector("#par").style.fontSize = "20px";
     para.innerHTML += "array["+j+"] ->"+ array[j]+"<br>";
     j++;
+    }
+    }
+    */
+   
+   // for of loop
+   // iterates over array elements or objects values
+   //syntax for (variable of iterable) { //code block to be executed }
+   let para = document.getElementById("par");
+    let output = document.getElementById("myH1");
+   let array = [1,2,3,4,5,6,7,8,9,10];
+   
+   function loop(){
+       document.querySelector("#par").style.color = "red";
+    document.querySelector("#par").style.fontSize = "20px";
+    para.innerHTML = "starting of loop <br>";
+    for(let element of array){
+        para.innerHTML += "array element ->"+ element+"<br>";
+    }
+}
+
+let map = new Map();
+map.set("name","John");
+map.set("age",30);
+map.set("city","New York");
+map.set("name","Doe");
+function loop2(){
+    document.querySelector("#myH1").style.color = "blue";
+    document.querySelector("#myH1").style.fontSize = "20px";
+    output.innerHTML = "starting of loop <br>";
+    for(let [key,value] of map){
+        output.innerHTML += key+" - "+ value+"<br>";
+    }
+   //for of loop with set
+    let set = new Set([1,2,3,4,5,6,7,8,9,10]);
+    for(let value of set){
+        output.innerHTML += value+",";
+    }
+    output.innerHTML += "<br>";
+
+
+    //nested for of loop
+    
+    let nestedArray = [1,2,4,5,8];
+    
+    for(let innerArray of nestedArray){
+        output.innerHTML += "Multiplication table of "+innerArray+"<br>";
+        for(let i = 0; i < 4; i++){
+            output.innerHTML += `value multiplied by ${innerArray} x ${i} = ${innerArray*i}<br>`;
+}
+
 }
 }
-
-
-
 
 
 
