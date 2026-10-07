@@ -25,6 +25,7 @@ function task4(callback){
         callback();
     },2000);
 }
+task4();
 
 task1(()=>{
     task2(()=>{
